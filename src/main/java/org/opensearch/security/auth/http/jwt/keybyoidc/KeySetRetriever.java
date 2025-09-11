@@ -64,7 +64,7 @@ public class KeySetRetriever implements KeySetProvider {
         configureCache(useCacheForOidConnectEndpoint);
     }
 
-    KeySetRetriever(SSLConfig sslConfig, boolean useCacheForOidConnectEndpoint, String jwksUri) {
+    public KeySetRetriever(SSLConfig sslConfig, boolean useCacheForOidConnectEndpoint, String jwksUri) {
         this.jwksUri = jwksUri;
         this.sslConfig = sslConfig;
 

@@ -66,9 +66,9 @@ public class HTTPJwtKeyByJWKSAuthenticator extends AbstractHTTPJwtAuthenticator 
 
         // Create key set retriever for direct JWKS endpoint access
         KeySetRetriever keySetRetriever = new KeySetRetriever(
-            jwksUri,
             getSSLConfig(settings, configPath),
-            cacheJwksEndpoint
+            cacheJwksEndpoint,
+            jwksUri
         );
         keySetRetriever.setRequestTimeoutMs(jwksRequestTimeoutMs);
 
